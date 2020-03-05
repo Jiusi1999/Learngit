@@ -1,0 +1,43 @@
+第一天学习Git(分布式管理，版本管理器）----2020.3.5-22:08
+1.使用git config --globl user.name显示名字
+  使用git config --globl user.email显示邮箱
+  或使用以上修改
+2.创建库
+    git init
+3.添加文件git add ****
+4.提交文件git commit -m"wrote a *** file"
+4.要随时掌握工作区的状态，使用git status命令。
+  如果git status告诉你有文件被修改过，用git diff可以查看修改内容。
+5.git commit -m"add distributed"提交修改后的文件
+----------------------------------------
+第二天学习Git（版本回退，时光穿梭）
+   Git管理的文件分为：工作区，版本库，版本库又分为暂存区stage和暂存区分支master(仓库)
+
+   工作区>>>>暂存区>>>>仓库
+
+       git add把文件从工作区>>>>暂存区，git commit把文件从暂存区>>>>仓库，
+
+       git diff查看工作区和暂存区差异，
+
+       git diff --cached查看暂存区和仓库差异，
+
+       git diff HEAD 查看工作区和仓库的差异，
+
+       git add的反向命令git checkout，撤销工作区修改，即把暂存区最新版本转移到工作区，
+
+       git commit的反向命令git reset HEAD，就是把仓库最新版本转移到暂存区。
+
+       不知道我分析的对不对。
+---------------------------------------
+第三天学习Git（SSH秘钥生成与绑定Github,远程仓库关联，Push本地库到Github远程库）
+1.在主目录下检查有无.ssh文件；有则看有无id_rsa和id_rsa.pub文件
+                              无则bash中输入命令ssh-keygen -t rsa -C "youremail@example.com"
+							  
+2.github上关联SSH（用id_rsa.pub公钥）
+
+3.关联本地库与远程库git remote add origin git@github.com:Jiusi1999/learngit.git
+
+4.推送git push -u origin master
+
+5.成功！
+  
